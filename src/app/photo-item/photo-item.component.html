@@ -1,0 +1,6 @@
+<section class="listing">
+    <img class="listing-photo" [src]="photoItem.url" alt="Exterior photo of {{photoItem.title}}">
+    <h2 class="listing-heading">{{ photoItem.title }}</h2>
+    <p>{{ photoItem.description}}</p>
+    <a [routerLink]="['/details', photoItem.id]">Details</a>
+  </section>

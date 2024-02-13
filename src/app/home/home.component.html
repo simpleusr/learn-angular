@@ -1,0 +1,17 @@
+<section>
+  <p>
+    This project is based on mock photos api hosted by Sling Academy.
+   <br/>
+    Please visit <a href="https://www.slingacademy.com/article/sample-photos-free-fake-rest-api-for-practice/#Get_a_List_of_Photos">project page</a>  for more details.
+  </p>
+</section>
+<section>
+  <form>
+    <input type="number" min="0" value="0" id="offset"  name="offset" [(ngModel)]="offset">
+    <input type="number" min="0" value="10" id="limit"  name="limit" [(ngModel)]="limit">
+    <button class="primary" type="button" (click) = "search(offset ,limit)">Search2</button>
+  </form>
+</section>
+<section class="results">
+  <app-photo-item *ngFor="let photoItem of photoItemList" [photoItem]="photoItem"></app-photo-item>
+</section>
